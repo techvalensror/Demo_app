@@ -1,0 +1,46 @@
+
+<h3>Register Hear</h3>
+
+<%= form_for @user ,:as => :user, :url => user_create_path, :method => 'post' ,:remote => true, :authenticity_token => true    do |f| %>
+
+<p>
+<div class="">
+  <label>First Name :</label><br/>
+  <%= f.text_field :first_name %>
+</div>
+</p>
+
+<p>
+<div class="">
+  <label>Last Name :</label><br/>
+  <%= f.text_field :last_name %>
+</div>
+</p>
+
+<p>
+<div class="">
+  <label>E-mail :</label><br/>
+  <%= f.text_field :email %>
+</div>
+</p>
+
+<p>
+<div class="">
+  <label>Password :</label><br/>
+  <%= f.password_field :password %>
+</div>
+</p>
+
+<p>
+<div class="">
+  <label>Password Confirmation :</label><br/>
+  <%= f.password_field :password_confirmation %>
+</div>
+</p>
+<p>
+<div class="">
+  <%= f.submit "Register" %>
+</div>
+</p>
+
+<% end %>
